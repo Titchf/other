@@ -1,0 +1,17 @@
+
+<div class="container m-3">
+<div class="card" style="width: 18rem;">
+ <div class="card-body">
+ <h5 class="card-title"><%= @task.title %>&nbsp;<%= @task.completed ? "✅" : "🛑"%></h5>
+<p class="card-text"><%= @task.details %>"</p>
+<br>
+<%= link_to "[<-]", root_path %>&nbsp;
+<%= link_to "[edit]", edit_task_path(@task) %> &nbsp;
+<%= link_to "[delete] #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+
+
+</div></div></div>

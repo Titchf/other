@@ -1,0 +1,13 @@
+<div class="container m-5">
+<div class="row">
+<div class="col mt-3">
+<h2><u><%= link_to "[+]", tasks_new_path %>&nbsp;My list of tasks</u></h2>
+<ul class="list-group mt-3">
+<% @tasks.each do |task| %>
+ <li class="list-group-item"><%= link_to task.title, task_path(task) %></li>
+<%end%>
+</ul>
+
+
+
+</div></div></div>
